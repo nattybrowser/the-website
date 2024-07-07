@@ -3,7 +3,7 @@ const postsContainer = document.querySelector(".posts-container");
 const searchDisplay = document.querySelector(".search-display");
 
 fetch(
-  "https://gist.githubusercontent.com/nattybrowser/938cd4c6b27ff460a6cf4663a112ec0f/raw/2a56e2be8b90dc06079d20b6c750c8f03b38c9a4/natty.json"
+  "natty.json"
 ).then(async (response) => {
   postsData = await response.json();
   postsData.map((post) => createPost(post));
