@@ -81,7 +81,7 @@ search.addEventListener(
   false
 );
 function generateImages(data) {
- const container = document.getElementById('post-image');
+ const container = document.getElementByClass('.post-image');
  data.forEach(item => {
     const img = document.createElement('img');
     img.src = item.src;
