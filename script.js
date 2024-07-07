@@ -1,9 +1,6 @@
-
 let postsData = "";
 const postsContainer = document.querySelector(".posts-container");
 const searchDisplay = document.querySelector(".search-display");
-
-
 
 fetch(
   "natty.json"
@@ -11,8 +8,6 @@ fetch(
   postsData = await response.json();
   postsData.map((post) => createPost(post));
 });
-
-
 
 const createPost = (postData) => {
   const { title, link, image, categories } = postData;
@@ -34,7 +29,7 @@ const createPost = (postData) => {
       </div>
   `;
 
-
+  postsContainer.append(post);
 };
 
 const handleSearchPosts = (query) => {
