@@ -1,6 +1,10 @@
+
 let postsData = "";
 const postsContainer = document.querySelector(".posts-container");
 const searchDisplay = document.querySelector(".search-display");
+const seeMoreButton = document.getElementById("seeMore")
+let currentPage = 1;
+const postsPerpage = 12;
 
 fetch(
   "natty.json"
@@ -8,6 +12,8 @@ fetch(
   postsData = await response.json();
   postsData.map((post) => createPost(post));
 });
+
+let displayedPosts = data.slice(0, currentpage * postsPerPage);
 
 const createPost = (postData) => {
   const { title, link, image, categories } = postData;
@@ -30,6 +36,9 @@ const createPost = (postData) => {
   `;
 
   postsContainer.append(post);
+  postElement.addEventListner('click', () => {
+    window.location.href = postLink.href;
+  });
 };
 
 const handleSearchPosts = (query) => {
