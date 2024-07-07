@@ -80,6 +80,15 @@ search.addEventListener(
   },
   false
 );
+function generateImages(data) {
+ const container = document.getElementById('post-image');
+ data.forEach(item => {
+    const img = document.createElement('img');
+    img.src = item.src;
+    img.alt = item.alt;
+    img.loading = 'lazy'; // Enable lazy loading
+    container.appendChild(img);
+ });
 
 
 window.addEventListener("load", function () {
