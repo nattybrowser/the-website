@@ -1,4 +1,4 @@
-let postsData = "";
+\let postsData = "";
 const postsContainer = document.querySelector(".posts-container");
 const searchDisplay = document.querySelector(".search-display");
 
