@@ -110,6 +110,12 @@ a {
     transition: left .4s;
   }
 
+.posts-container{
+
+display: block ;
+
+}
+
   .nav__item {
     transform: translateX(-150px);
     visibility: hidden;
@@ -221,11 +227,7 @@ a {
   left: 0;
 }
 
-.posts-container{
 
-display: block ;
-
-}
 
 /* Animation link when displaying menu */
 .show-menu .nav__item {
