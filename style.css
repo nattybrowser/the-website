@@ -14,7 +14,9 @@
     overflow-x: hidden;
     scroll-behavior: smooth;
   }
-  
+  a{
+color: black;
+}
   header h1 {
     color: #ffffff;
   }
